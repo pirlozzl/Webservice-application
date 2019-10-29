@@ -1,0 +1,14 @@
+JaxWsServerFactoryBean jaxWsServerFactoryBean = new JaxWsServerFactoryBean();
+jaxWsServerFactoryBean.setAddress("http://localhost:xxxxxxx");
+jaxWsServerFactoryBean.setServiceClass(xxxxImpl.class);
+Server server = jaxWsServerFactoryBean.create();
+server.start();
+
+
+
+JaxWsProxyFactoryBean jaxWsProxyFactoryBean = new JaxWsProxyFactoryBean();
+jaxWsProxyFactoryBean.setAddress("http://localhost:xxxxxxx");
+jaxWsProxyFactoryBean.setServiceClass(xxxx.class);
+Object object = (Object)jaxWsProxyFactoryBean.create();
+String result = object.xxxx();
+
